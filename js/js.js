@@ -1,4 +1,5 @@
 let d = document;
+const $loader=d.getElementById("loader");
 const $moviesList = d.querySelector(".movies-list");
 const $search = d.getElementById("search");
 const $template = d.querySelector(".movie-list-template").content;
@@ -9,7 +10,7 @@ const getMovie = async (movieName) => {
     try {
         let res = await fetch(`https://api.tvmaze.com/search/shows?q=${movieName}`),
             json = await res.json();
-
+            $loader.style.display="block";
         DomMovies(json);
     } catch (error) {
 
@@ -18,8 +19,7 @@ const getMovie = async (movieName) => {
 
 const DomMovies = async (json) => {
     json.forEach(el => {
-        console.log(el.show)
-
+       /*  console.log(el.show) */
         $template.querySelector(".movieName").textContent = el.show.name;
 
         if (el.show.image != null) {
@@ -34,10 +34,14 @@ const DomMovies = async (json) => {
 
     $moviesList.appendChild($fragment);
 
-    
+    $loader.style.display="none";
 }
 
 d.addEventListener("submit", async e => {
     e.preventDefault();
-    getMovie($inputMovie.value)
+    getMovie($inputMovie.value);
+
+    while($moviesList.firstChild){
+        $moviesList.removeChild($moviesList.firstChild)
+    }
 });
