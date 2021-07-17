@@ -26,12 +26,15 @@ const DomMovies = async (json) => {
             $template.querySelector(".movieImage").setAttribute("src", `${el.show.image.medium}`),
                 $template.querySelector(".movieImage").setAttribute("alt", `${el.show.name}`);
         }
+        $template.querySelector(".movieSummary").innerHTML=el.show.summary;
 
         let node = d.importNode($template, true);
         $fragment.appendChild(node);
     });
 
     $moviesList.appendChild($fragment);
+
+    
 }
 
 d.addEventListener("submit", async e => {

@@ -9,17 +9,55 @@
 </head>
 
 <style>
-    .movies-list{
+    .movies-list {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .movie {
+        margin: 20px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .lds-dual-ring {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+    }
+
+    .lds-dual-ring:after {
+        content: " ";
+        display: block;
+        width: 64px;
+        height: 64px;
+        margin: 8px;
+        border-radius: 50%;
+        border: 6px solid #fff;
+        border-color: #2e2e2e transparent #2e2e2e transparent;
+        animation: lds-dual-ring 1.2s linear infinite;
+    }
+
+    @keyframes lds-dual-ring {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
     }
 </style>
 
 <body>
-
+   
     <div class="main">
         <div class="title">
-            <h1>Find Movies</h1>
+            <a href="index.html">
+                <h1>Find Movies</h1>
+            </a>
         </div>
         <div class="search-movie">
             <form method="post">
@@ -34,8 +72,9 @@
 
     <template class="movie-list-template">
         <div class="movie">
-            <h3 class="movieName"></h3>
+            <h2 class="movieName"></h2>
             <img class="movieImage" src="" alt="">
+            <p class="movieSummary"></p>
         </div>
     </template>
 
