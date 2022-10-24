@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,600;1,100;1,400&family=Roboto+Slab:wght@900&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: 0%;
+    font-family: 'Raleway', sans-serif;;
+}
+
+header .main{
+    background-image: url('../img/banner.webp');
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0%;
+    width: 100%;
+}
+
+body{
+    background-color: aliceblue;
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+    font-style: normal;
+    font-weight: bold;
+}
+
+header .main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.search-movie{
+    margin-top: 1rem;
+}
+
+.movie__section .movies-list{
+    display: flex;
+    justify-content: center;
+    margin: 13rem 2rem;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.movie{
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    height: max-content;
+    padding: 2rem;
+}
+
+.movieName{
+    margin-bottom: 1rem;
+}
+
+.movieSummary{
+    width: 250px;
+    margin-top: 1rem;
+    text-align: justify;
+}
+
+.search-movie input , button{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 1rem;
+}
+
+.search-movie button{
+    background-color: lightblue;
+}

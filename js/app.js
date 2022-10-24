@@ -10,7 +10,6 @@ const getMovie = async (movieName) => {
     try {
         let res = await fetch(`https://api.tvmaze.com/search/shows?q=${movieName}`),
             json = await res.json();
-            $loader.style.display="block";
         DomMovies(json);
     } catch (error) {
 
