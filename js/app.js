@@ -18,7 +18,6 @@ const getMovie = async (movieName) => {
 
 const DomMovies = async (json) => {
     json.forEach(el => {
-       /*  console.log(el.show) */
         $template.querySelector(".movieName").textContent = el.show.name;
 
         if (el.show.image != null) {
@@ -32,7 +31,7 @@ const DomMovies = async (json) => {
     });
 
     $moviesList.appendChild($fragment);
-
+    $inputMovie.value="";
     $loader.style.display="none";
 }
 
