@@ -5,70 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/loader/loader.css">
     <title>Find Movies</title>
 </head>
 
-<style>
-    .movies-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-
-    .movie {
-        margin: 20px;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-    .lds-dual-ring {
-        display: inline-block;
-        width: 80px;
-        height: 80px;
-    }
-
-    .lds-dual-ring:after {
-        content: " ";
-        display: block;
-        width: 64px;
-        height: 64px;
-        margin: 8px;
-        border-radius: 50%;
-        border: 6px solid #fff;
-        border-color: #2e2e2e transparent #2e2e2e transparent;
-        animation: lds-dual-ring 1.2s linear infinite;
-    }
-
-    @keyframes lds-dual-ring {
-        0% {
-            transform: rotate(0deg);
-        }
-
-        100% {
-            transform: rotate(360deg);
-        }
-    }
-</style>
-
 <body>
-   
-    <div class="main">
-        <div class="title">
-            <a href="index.html">
-                <h1>Find Movies</h1>
-            </a>
+    <header>
+        <div class="main">
+            <div class="title">
+                <a href="index.html">
+                    <h1>Find Movies</h1>
+                </a>
+            </div>
+            <div class="search-movie">
+                <form method="post">
+                    <input type="text" id="inputMovie">
+                    <button type="submit" id="search">Search</button>
+                </form>
+            </div>
         </div>
-        <div class="search-movie">
-            <form method="post">
-                <input type="text" id="inputMovie">
-                <button type="submit" id="search">Search</button>
-            </form>
-        </div>
-        <div class="movies-list">
-            <div class="lds-dual-ring" style="display: none;" id="loader"></div>
-        </div>
-    </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <div class="movies-list">
+                    <div class="lds-roller"><div></div><div></div><div></div><div></div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <template class="movie-list-template">
         <div class="movie">
@@ -78,7 +45,7 @@
         </div>
     </template>
 
-    <script src="js/js.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
