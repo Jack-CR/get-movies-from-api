@@ -1,0 +1,15 @@
+.footer .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffff;
+    height: 80px;
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+}
+
+span{
+    font-weight: bold;
+    font-style: normal;
+}
