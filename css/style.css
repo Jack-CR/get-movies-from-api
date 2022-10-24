@@ -1,10 +1,20 @@
 *{
     margin: 0%;
     padding: 0%;
+    box-sizing: 0%;
+}
+
+header .main{
+    background-color: #fff;
+}
+
+body{
+    background-color: aliceblue;
 }
 
 a{
     text-decoration: none;
+    color: aliceblue;
 }
 
 header .main{
@@ -19,6 +29,28 @@ header .main{
     margin-top: 1rem;
 }
 
-.lds-dual-ring{
-    color: red;
+.movie__section .movies-list{
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.movie{
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    height: max-content;
+    padding: 2rem;
+}
+
+.movieName{
+    margin-bottom: 1rem;
+}
+
+.movieSummary{
+    width: 250px;
+    margin-top: 1rem;
+    text-align: justify;
 }
